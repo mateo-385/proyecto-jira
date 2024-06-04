@@ -1,0 +1,18 @@
+.carousel .carousel-item {
+  height: 20vw;
+}
+
+.carousel-item img {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  object-fit: cover;
+  min-height: 20vw;
+}
+
+.b-nav {
+  font-size: small;
+}
+.b-nav i {
+  font-size: xx-large;
+}
