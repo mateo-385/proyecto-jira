@@ -7,7 +7,7 @@ const inputNodes = document.querySelectorAll("form input")
 console.log(inputNodes[0])
 
 
-// La siguiente codificación se logra haciendo -> btoa('admin:asdfasdf')
+// La siguiente codificación se logra haciendo -> btoa('mateo@gmail.com:123')
 const savedUserCredentials = "bWF0ZW9AZ21haWwuY29tOjEyMw=="; // base64
 function login(payload) {
     if (payload === savedUserCredentials) {
@@ -32,8 +32,6 @@ formulario.addEventListener('submit', (e) => {
     // Cuando el usuario hace click en Ingresar, se obtienen los valores de los inputs
     const user = document.getElementById('floatingInput').value;
     const password = document.getElementById('floatingPassword').value
-
-    const emailRegex = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
 
     // Se obtiene la referencia del div donde se mostrarán mensajes al usuario
     const alertDiv = document.getElementById('alerts');
