@@ -1,118 +1,111 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Mapa</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
-        <link rel="stylesheet" href="/landing/index.css">
-        <script src="https://kit.fontawesome.com/b9609ad0eb.js" crossorigin="anonymous"></script>
+<head>
+    <title>Mapa</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    </head>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="/landing/index.css">
+    <script src="https://kit.fontawesome.com/b9609ad0eb.js" crossorigin="anonymous"></script>
 
-    <body class="vh-100">
-        <div class="container-fluid">
-            <div class="row vh-100">
-                <nav class="sidebar col-md-4 col-lg-2 p-3 bg-body-tertiary d-md-block d-none">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-4">Empresa</span>
-                    </a>
-                    <hr class="text-white">
-                    <div class="d-md-flex flex-column p-0 overflow-y-auto">
-                        <ul class="nav nav-pills flex-column mb-auto fs-5 gap-2">
-                            <li class="nav-item">
-                                <a href="/landing/index.html" class="nav-link text-white" aria-current="page">
-                                    <i class="fa-solid fa-house me-2" aria-hidden="true"></i>
-                                    Inicio
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link active text-white link-body-emphasis">
-                                    <i class="fa-solid fa-map me-2" aria-hidden="true"></i>
-                                    Mapa
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link text-white link-body-emphasis">
-                                    <i class="fa-solid fa-gas-pump me-2" aria-hidden="true"></i>
-                                    Estaciones
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link text-white link-body-emphasis">
-                                    <i class="fa-solid fa-gear me-2" aria-hidden="true"></i>
-                                    Ajustes
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <nav class="navbar b-nav fixed-bottom d-md-none navbar-dark bg-body-tertiary d-flex justify-content-center">
-                    <div class="p-0">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link d-flex align-items-center gap-2 flex-column text-center text-white">
-                                    <i class="fa-solid fa-house" aria-hidden="true"></i>
-                                    INICIO
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/maps/mapa.html" class="nav-link d-flex align-items-center gap-2 flex-column text-center text-white">
-                                    <i class="fa-solid fa-map" aria-hidden="true"></i>
-                                    MAPA
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link d-flex align-items-center gap-2 flex-column text-center text-white">
-                                    <i class="fa-solid fa-gas-pump" aria-hidden="true"></i>
-                                    ESTACIONES
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link d-flex align-items-center gap-2 flex-column text-center text-white">
-                                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
-                                    AJUSTES
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-        <main class="col-md-8 p-0 col-lg-10">
-            <div id="map" style="height: 100vh;"></div>
-        </main>
-        
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+</head>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
-        <script src="mapa.js"></script>
-    </body>
+<body class="vh-100">
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <nav class="sidebar col-md-4 col-lg-2 p-3 bg-body-tertiary d-md-block d-none">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4">Empresa</span>
+                </a>
+                <hr class="text-white">
+                <div class="d-md-flex flex-column p-0 overflow-y-auto">
+                    <ul class="nav nav-pills flex-column mb-auto fs-5 gap-2">
+                        <li class="nav-item">
+                            <a href="/landing/index.html" class="nav-link text-white" aria-current="page">
+                                <i class="fa-solid fa-house me-2" aria-hidden="true"></i>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link active text-white link-body-emphasis">
+                                <i class="fa-solid fa-map me-2" aria-hidden="true"></i>
+                                Mapa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link text-white link-body-emphasis">
+                                <i class="fa-solid fa-gas-pump me-2" aria-hidden="true"></i>
+                                Estaciones
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link text-white link-body-emphasis">
+                                <i class="fa-solid fa-gear me-2" aria-hidden="true"></i>
+                                Ajustes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="navbar b-nav fixed-bottom d-md-none navbar-dark bg-body-tertiary d-flex justify-content-center">
+                <div class="p-0">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#"
+                                class="nav-link d-flex align-items-center gap-2 flex-column text-center text-white">
+                                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                                INICIO
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/maps/mapa.html"
+                                class="nav-link d-flex align-items-center gap-2 flex-column text-center text-white">
+                                <i class="fa-solid fa-map" aria-hidden="true"></i>
+                                MAPA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"
+                                class="nav-link d-flex align-items-center gap-2 flex-column text-center text-white">
+                                <i class="fa-solid fa-gas-pump" aria-hidden="true"></i>
+                                ESTACIONES
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"
+                                class="nav-link d-flex align-items-center gap-2 flex-column text-center text-white">
+                                <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                                AJUSTES
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="col-md-8 p-0 col-lg-10">
+                <div id="map" style="height: 100vh;"></div>
+            </main>
+
+            <footer>
+                <!-- place footer here -->
+            </footer>
+            <!-- Bootstrap JavaScript Libraries -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                crossorigin="anonymous"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+            <script src="/src/assets/js/mapa.js"></script>
+</body>
+
 </html>
