@@ -1,54 +1,80 @@
-const map = L.map('map').setView([-26.1849, -58.1731], 13); // Coordenadas para Formosa, Argentina
+const map = L.map('map').setView([-26.1849, -58.1731], 13);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const ypfIcon = L.icon({
-    iconUrl: '/src/assets/img/ypf.png',
-    iconSize: [45, 47.5],
-    iconAnchor: [9.5, 47.5],
-    popupAnchor: [-1.5, -38]
-});
+const osmHOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team hosted by OpenStreetMap France'});
 
-const axionIcon = L.icon({
-    iconUrl: '/src/assets/img/axion.png',
-    iconSize: [80, 47.5],
-    iconAnchor: [9.5, 47.5],
-    popupAnchor: [-1.5, -38]
-});
+// Función para crear iconos
+function crearIcono(url, size, anchor, popupAnchor) {
+    return L.icon({
+        iconUrl: url,
+        iconSize: size,
+        iconAnchor: anchor,
+        popupAnchor: popupAnchor
+    });
+}
 
-const shellIcon = L.icon({
-    iconUrl: '/src/assets/img/shell.png',
-    iconSize: [55, 47.5],
-    iconAnchor: [9.5, 47.5],
-    popupAnchor: [-1.5, -38]
-});
+// Iconos de cada Estación de Servicio
+const ypfIcon = crearIcono('/src/assets/img/ypf.png', [45, 47.5], [9.5, 47.5], [-1.5, -38]);
+const axionIcon = crearIcono('/src/assets/img/axion.png', [80, 47.5], [9.5, 47.5], [-1.5, -38]);
+const shellIcon = crearIcono('/src/assets/img/shell.png', [55, 47.5], [9.5, 47.5], [-1.5, -38]);
 
+// Layer Group de cada Estación de Servicio
+const ypfLayerGroup = new L.LayerGroup().addTo(map);
+const axionLayerGroup = new L.LayerGroup().addTo(map);
+const shellLayerGroup = new L.LayerGroup().addTo(map);
+
+// Fetch de JSON con las Estaciones de Servicio
 fetch("/src/assets/json/estaciones.json")
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('No respondió el servidor');
+        }
+        return response.json();
+    })
+
     .then(data => {
         data.forEach(estacion => {
-            let icono;
-            switch (estacion.marca) {
-                case 'YPF':
-                    icono = ypfIcon;
-                    break;
-                case 'AXION':
-                    icono = axionIcon;
-                    break;
-                case 'Shell':
-                    icono = shellIcon;
-                    break;
-                default:
-                    console.error('Marca no reconocida:', estacion.marca);
-                    return;
+            const icono = {
+                'YPF': ypfIcon,
+                'AXION': axionIcon,
+                'Shell': shellIcon
+            }
+            [estacion.marca];
+            const targetGroup = {
+                'YPF': ypfLayerGroup,
+                'AXION': axionLayerGroup,
+                'Shell': shellLayerGroup
+            }
+            [estacion.marca];
+
+            if (!icono || !targetGroup) {
+                console.error('Marca no reconocida:', estacion.marca);
+                return;
             }
 
             L.marker([estacion.latitude, estacion.longitude], { icon: icono })
-                .addTo(map)
-                .bindPopup(estacion.name);
+                .bindPopup(estacion.name)
+                .addTo(targetGroup);
         });
     })
-    .catch(error => console.error('Error al cargar el JSON:', error));
+    .catch(error => console.error('Error:', error));
+
+// Control de Capas
+const baseMaps = {
+    "OpenStreetMap": osm,
+    "OpenStreetMap.HOT": osmHOT
+};
+const overlayMaps = {
+    "YPF": ypfLayerGroup,
+    "Shell": shellLayerGroup,
+    "AXION": axionLayerGroup
+};
+
+
+L.control.layers({}, overlayMaps).addTo(map);
