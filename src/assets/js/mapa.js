@@ -5,18 +5,48 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-const shell = L.icon({
+const ypfIcon = L.icon({
+    iconUrl: '/src/assets/img/ypf.png',
+    iconSize: [45, 47.5],
+    iconAnchor: [9.5, 47.5],
+    popupAnchor: [-1.5, -38]
+});
+
+const axionIcon = L.icon({
+    iconUrl: '/src/assets/img/axion.png',
+    iconSize: [80, 47.5],
+    iconAnchor: [9.5, 47.5],
+    popupAnchor: [-1.5, -38]
+});
+
+const shellIcon = L.icon({
     iconUrl: '/src/assets/img/shell.png',
-    iconSize:     [38, 95], // tamaño del icono
-    iconAnchor:   [22, 94], // punto del icono que corresponderá a la ubicación del marcador
-    popupAnchor:  [-3, -76] // punto desde el cual el popup debe abrirse en relación con iconAnchor
+    iconSize: [55, 47.5],
+    iconAnchor: [9.5, 47.5],
+    popupAnchor: [-1.5, -38]
 });
 
 fetch("/src/assets/json/estaciones.json")
     .then(response => response.json())
     .then(data => {
         data.forEach(estacion => {
-            L.marker([estacion.latitude, estacion.longitude], { icon: shell })
+            let icono;
+            switch (estacion.marca) {
+                case 'YPF':
+                    icono = ypfIcon;
+                    break;
+                case 'AXION':
+                    icono = axionIcon;
+                    break;
+                case 'Shell':
+                    icono = shellIcon;
+                    break;
+                default:
+                    console.error('Marca no reconocida:', estacion.marca);
+                    return;
+            }
+
+            L.marker([estacion.latitude, estacion.longitude], { icon: icono })
                 .addTo(map)
                 .bindPopup(estacion.name);
         });
