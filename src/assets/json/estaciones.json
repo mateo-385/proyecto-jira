@@ -35,25 +35,11 @@
     "longitude": -59.1011443
   },
   {
-    "name": "Villa Escolar",
-    "full_address": "Formosa Province",
-    "marca": "YPF",
-    "latitude": -26.6235421,
-    "longitude": -58.6705773
-  },
-  {
     "name": "M-M Petrol S.A.S",
     "full_address": "San Martín 2, Formosa Province",
     "marca": "YPF",
     "latitude": -24.4349281,
     "longitude": -59.6573881
-  },
-  {
-    "name": "Formosa",
-    "full_address": "Formosa Province",
-    "marca": "YPF",
-    "latitude": -26.1857768,
-    "longitude": -58.1755669
   },
   {
     "name": "Shell Formosa",
@@ -68,13 +54,6 @@
     "marca": "Shell",
     "latitude": -26.2363563,
     "longitude": -58.247186
-  },
-  {
-    "name": "ES-GAS",
-    "full_address": "Formosa, Formosa Province",
-    "marca": "YPF",
-    "latitude": -26.1895435,
-    "longitude": -58.2174603
   },
   {
     "name": "YPF",
@@ -96,13 +75,6 @@
     "marca": "YPF",
     "latitude": -26.1196619,
     "longitude": -58.2204542
-  },
-  {
-    "name": "LEZCANO GAS S.R.L.",
-    "full_address": "Santos, Marighetti 296, P3600MRF Formosa",
-    "marca": "YPF",
-    "latitude": -26.1585082,
-    "longitude": -58.1783137
   },
   {
     "name": "B M Combustibles",
@@ -131,13 +103,6 @@
     "marca": "YPF",
     "latitude": -25.048998,
     "longitude": -60.0906551
-  },
-  {
-    "name": "Tte. Brown",
-    "full_address": "Formosa Province",
-    "marca": "YPF",
-    "latitude": -24.8023675,
-    "longitude": -60.4567202
   },
   {
     "name": "Palma Sola",
@@ -187,13 +152,6 @@
     "marca": "YPF",
     "latitude": -25.136345,
     "longitude": -58.244713
-  },
-  {
-    "name": "Service Lux",
-    "full_address": "QPWV+8R, Laguna Blanca, Formosa",
-    "marca": "YPF",
-    "latitude": -25.2042279,
-    "longitude": -58.2553849
   },
   {
     "name": "Combustibles San Pedro S.R.L.",
