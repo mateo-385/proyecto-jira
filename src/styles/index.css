@@ -1,19 +1,61 @@
-.carousel .carousel-item {
-  height: 20vw;
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Oswald:wght@200..700&display=swap");
+.sidebar {
+  background-color: #343a40;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.carousel-item img {
-  position: absolute;
-  margin: auto;
-  width: 100%;
-  object-fit: cover;
-  min-height: 20vw;
+.cards p {
+  font-size: 20px;
+}
+.card {
+  flex-direction: row !important;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.card img {
+  height: 4vw;
+}
+.lcd-font {
+  font-family: "LCD", sans-serif;
+  color: white;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+}
+.lexend {
+  font-family: "Lexend Deca", sans-serif;
+}
+.b-nav {
+  background-color: #343a40;
+}
 .b-nav {
   font-size: small;
 }
 .b-nav i {
   font-size: xx-large;
 }
-#map { height: 180px; }
+#map {
+  height: 180px;
+}
+
+@media screen and (max-width: 990px) {
+  .row {
+    width: 100% !important;
+  }
+  .card {
+    width: 100%;
+  }
+  .card img {
+    height: 10vw;
+  }
+  .cards p {
+    font-size: 15px;
+  }
+}
