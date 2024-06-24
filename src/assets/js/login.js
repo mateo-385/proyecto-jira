@@ -49,8 +49,8 @@ formulario.addEventListener('submit', (e) => {
 
         // Redirección a la página principal después de 3 segundos
         setTimeout(() => {
-            location.href = '../landing/index.html'
-        }, 3000);
+            location.href = '/src/views/index.html'
+        }, 2000);
     } else {
         const alert = createAlert('danger', 'Usuario o contraseña incorrectos!')
         alertDiv.innerHTML = alert;

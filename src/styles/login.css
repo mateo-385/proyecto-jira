@@ -12,6 +12,11 @@ body {
   z-index: 2;
 }
 
+.form-signin form {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
 .form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
@@ -26,4 +31,11 @@ body {
 
 #alerts {
   position: absolute;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
 }
