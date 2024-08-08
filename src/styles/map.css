@@ -1,0 +1,38 @@
+.popup {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.popup h2 {
+    color: #007BFF;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.popup .address {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+.popup .prices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.popup .price {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.popup .price .fuel {
+    margin-right: 5px;
+    color: #333;
+}
+
+.popup .no-prices {
+    color: #999;
+}

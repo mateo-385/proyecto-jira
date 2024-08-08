@@ -1,184 +1,334 @@
 [
   {
-    "name": "Mariano Boedo",
-    "full_address": "Formosa Province",
-    "marca": "YPF",
-    "latitude": -26.1099044,
-    "longitude": -58.4865684
+      "name": "Mariano Boedo",
+      "full_address": "Formosa Province",
+      "marca": "YPF",
+      "latitude": -26.1099044,
+      "longitude": -58.4865684,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Werning Combustible",
-    "full_address": "RUTA NACIONAL 81, Juan Domingo Perón Y, P3634 Laguna Yema, Formosa",
-    "marca": "YPF",
-    "latitude": -24.2497478,
-    "longitude": -61.2423689
+      "name": "Werning Combustible",
+      "full_address": "RUTA NACIONAL 81, Juan Domingo Per\u00f3n Y, P3634 Laguna Yema, Formosa",
+      "marca": "YPF",
+      "latitude": -24.2497478,
+      "longitude": -61.2423689,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "El Espinillo",
-    "full_address": "Formosa Province",
-    "marca": "YPF",
-    "latitude": -24.9803469,
-    "longitude": -58.5518471
+      "name": "El Espinillo",
+      "full_address": "Formosa Province",
+      "marca": "YPF",
+      "latitude": -24.9803469,
+      "longitude": -58.5518471,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "AXION energy",
-    "full_address": "Carlos Pellegrini 705, P3606 Pirané, Formosa",
-    "marca": "AXION",
-    "latitude": -25.7399741,
-    "longitude": -59.1085302
+      "name": "AXION energy",
+      "full_address": "Carlos Pellegrini 705, P3606 Piran\u00e9, Formosa",
+      "marca": "AXION",
+      "latitude": -25.7399741,
+      "longitude": -59.1085302,
+      "precios":{
+          "Nafta Súper": 1158,
+          "Quantium": 1416,
+          "Diesel": 1256,
+          "Quantium Diesel": 1433
+      }
   },
   {
-    "name": "AXION energy",
-    "full_address": "entre Lopez y Planes y Saavedra, Ruta 3, P3606 Pirané, Formosa",
-    "marca": "AXION",
-    "latitude": -25.7411159,
-    "longitude": -59.1011443
+      "name": "AXION energy",
+      "full_address": "entre Lopez y Planes y Saavedra, Ruta 3, P3606 Piran\u00e9, Formosa",
+      "marca": "AXION",
+      "latitude": -25.7411159,
+      "longitude": -59.1011443,
+      "precios":{
+          "Nafta Súper": 1158,
+          "Quantium": 1416,
+          "Diesel": 1256,
+          "Quantium Diesel": 1433
+      }
   },
   {
-    "name": "M-M Petrol S.A.S",
-    "full_address": "San Martín 2, Formosa Province",
-    "marca": "YPF",
-    "latitude": -24.4349281,
-    "longitude": -59.6573881
+      "name": "M-M Petrol S.A.S",
+      "full_address": "San Mart\u00edn 2, Formosa Province",
+      "marca": "YPF",
+      "latitude": -24.4349281,
+      "longitude": -59.6573881,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Shell Formosa",
-    "full_address": "Av. Dr. Nestor Kirchner 4315, Formosa",
-    "marca": "Shell",
-    "latitude": -26.188508,
-    "longitude": -58.2143329
+      "name": "Shell Formosa",
+      "full_address": "Av. Dr. Nestor Kirchner 4315, Formosa",
+      "marca": "Shell",
+      "latitude": -26.188508,
+      "longitude": -58.2143329,
+      "precios": {
+          "Nafta S\u00faper": 1149,
+          "V-Power": 1409,
+          "F\u00f3rmula Diesel": 1209,
+          "V-Power Diesel": 1439
+      }
   },
   {
-    "name": "Shell La Estación S.A.",
-    "full_address": "RN11 Km 1164, P3600 Formosa",
-    "marca": "Shell",
-    "latitude": -26.2363563,
-    "longitude": -58.247186
+      "name": "Shell La Estaci\u00f3n S.A.",
+      "full_address": "RN11 Km 1164, P3600 Formosa",
+      "marca": "Shell",
+      "latitude": -26.2363563,
+      "longitude": -58.247186,
+      "precios": {
+          "Nafta S\u00faper": 1149,
+          "V-Power": 1409,
+          "F\u00f3rmula Diesel": 1209,
+          "V-Power Diesel": 1439
+      }
   },
   {
-    "name": "YPF",
-    "full_address": "Esq. Segunda, Barrio Circuito 5, Av. Dr. Laureano Maradona 1268, P3600 Formosa",
-    "marca": "YPF",
-    "latitude": -26.1506625,
-    "longitude": -58.1583047
+      "name": "YPF",
+      "full_address": "Esq. Segunda, Barrio Circuito 5, Av. Dr. Laureano Maradona 1268, P3600 Formosa",
+      "marca": "YPF",
+      "latitude": -26.1506625,
+      "longitude": -58.1583047,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Shell",
-    "full_address": "9 de Julio, Juan José Silva, 3600 Formosa",
-    "marca": "Shell",
-    "latitude": -26.1801028,
-    "longitude": -58.175978
+      "name": "Shell",
+      "full_address": "9 de Julio, Juan Jos\u00e9 Silva, 3600 Formosa",
+      "marca": "Shell",
+      "latitude": -26.1801028,
+      "longitude": -58.175978,
+      "precios": {
+          "Nafta S\u00faper": 1149,
+          "V-Power": 1409,
+          "F\u00f3rmula Diesel": 1209,
+          "V-Power Diesel": 1439
+      }
   },
   {
-    "name": "Antho Servicios S.R.L.",
-    "full_address": "RN11 Km. 1183,6, Formosa",
-    "marca": "YPF",
-    "latitude": -26.1196619,
-    "longitude": -58.2204542
+      "name": "Antho Servicios S.R.L.",
+      "full_address": "RN11 Km. 1183,6, Formosa",
+      "marca": "YPF",
+      "latitude": -26.1196619,
+      "longitude": -58.2204542,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "B M Combustibles",
-    "full_address": "Las Lomitas, Formosa Province",
-    "marca": "YPF",
-    "latitude": -24.7034499,
-    "longitude": -60.5888442
+      "name": "B M Combustibles",
+      "full_address": "Las Lomitas, Formosa Province",
+      "marca": "YPF",
+      "latitude": -24.7034499,
+      "longitude": -60.5888442,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Gasolinera!",
-    "full_address": "Fortín Cabo 1° Lugones, Formosa Province",
-    "marca": "YPF",
-    "latitude": -24.2937744,
-    "longitude": -59.8295682
+      "name": "Gasolinera!",
+      "full_address": "Fort\u00edn Cabo 1\u00b0 Lugones, Formosa Province",
+      "marca": "YPF",
+      "latitude": -24.2937744,
+      "longitude": -59.8295682,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Gomeria Y Gasolineria",
-    "full_address": "Fortín Cabo 1° Lugones, Formosa Province",
-    "marca": "YPF",
-    "latitude": -24.29195,
-    "longitude": -59.8296101
+      "name": "Gomeria Y Gasolineria",
+      "full_address": "Fort\u00edn Cabo 1\u00b0 Lugones, Formosa Province",
+      "marca": "YPF",
+      "latitude": -24.29195,
+      "longitude": -59.8296101,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Service Station Melazqui",
-    "full_address": "Estanislao del Campo, Formosa Province",
-    "marca": "YPF",
-    "latitude": -25.048998,
-    "longitude": -60.0906551
+      "name": "Service Station Melazqui",
+      "full_address": "Estanislao del Campo, Formosa Province",
+      "marca": "YPF",
+      "latitude": -25.048998,
+      "longitude": -60.0906551,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Palma Sola",
-    "full_address": "Formosa Province",
-    "marca": "YPF",
-    "latitude": -25.2498104,
-    "longitude": -57.9974208
+      "name": "Palma Sola",
+      "full_address": "Formosa Province",
+      "marca": "YPF",
+      "latitude": -25.2498104,
+      "longitude": -57.9974208,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "YPF - Bigatti Combustibles",
-    "full_address": "Av. Gendarmería Nacional 915, P3600 Formosa",
-    "marca": "YPF",
-    "latitude": -26.1562761,
-    "longitude": -58.18634
+      "name": "YPF - Bigatti Combustibles",
+      "full_address": "Av. Gendarmer\u00eda Nacional 915, P3600 Formosa",
+      "marca": "YPF",
+      "latitude": -26.1562761,
+      "longitude": -58.18634,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Estación de Servicio",
-    "full_address": "2299, Sta. Fe 2201, Clorinda, Formosa",
-    "marca": "YPF",
-    "latitude": -25.2805558,
-    "longitude": -57.7327298
+      "name": "Estaci\u00f3n de Servicio",
+      "full_address": "2299, Sta. Fe 2201, Clorinda, Formosa",
+      "marca": "YPF",
+      "latitude": -25.2805558,
+      "longitude": -57.7327298,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Shell",
-    "full_address": "Juan Bautista Alberdi, RN11, 3610 Clorinda",
-    "marca": "Shell",
-    "latitude": -25.2888247,
-    "longitude": -57.7239811
+      "name": "Shell",
+      "full_address": "Juan Bautista Alberdi, RN11, 3610 Clorinda",
+      "marca": "Shell",
+      "latitude": -25.2888247,
+      "longitude": -57.7239811,
+      "precios": {
+          "Nafta S\u00faper": 1149,
+          "V-Power": 1409,
+          "F\u00f3rmula Diesel": 1209,
+          "V-Power Diesel": 1439
+      }
   },
   {
-    "name": "AXION energy",
-    "full_address": "Av. Tucumán 165, P3610 Clorinda, Formosa",
-    "marca": "AXION",
-    "latitude": -25.2870971,
-    "longitude": -57.7233353
+      "name": "AXION energy",
+      "full_address": "Av. Tucum\u00e1n 165, P3610 Clorinda, Formosa",
+      "marca": "AXION",
+      "latitude": -25.2870971,
+      "longitude": -57.7233353
   },
   {
-    "name": "Baldus Service Station",
-    "full_address": "RN86, P3613 Laguna Blanca, Formosa",
-    "marca": "YPF",
-    "latitude": -25.1365803,
-    "longitude": -58.2426254
+      "name": "Baldus Service Station",
+      "full_address": "RN86, P3613 Laguna Blanca, Formosa",
+      "marca": "YPF",
+      "latitude": -25.1365803,
+      "longitude": -58.2426254,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "YPF",
-    "full_address": "RUTA NACIONAL 86 KM (Descendente) Y AV. 25 DE MAYO Laguna Blanca, Formosa",
-    "marca": "YPF",
-    "latitude": -25.136345,
-    "longitude": -58.244713
+      "name": "YPF",
+      "full_address": "RUTA NACIONAL 86 KM (Descendente) Y AV. 25 DE MAYO Laguna Blanca, Formosa",
+      "marca": "YPF",
+      "latitude": -25.136345,
+      "longitude": -58.244713,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "Combustibles San Pedro S.R.L.",
-    "full_address": "Av. González Lelong 1705, P3600 DKR, Formosa",
-    "marca": "YPF",
-    "latitude": -26.1799138,
-    "longitude": -58.1866692
+      "name": "Combustibles San Pedro S.R.L.",
+      "full_address": "Av. Gonz\u00e1lez Lelong 1705, P3600 DKR, Formosa",
+      "marca": "YPF",
+      "latitude": -26.1799138,
+      "longitude": -58.1866692,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "El Surtidor S.a.",
-    "full_address": "17 de Octubre 3600, P3600 Formosa",
-    "marca": "YPF",
-    "latitude": -26.1987856,
-    "longitude": -58.1753633
+      "name": "El Surtidor S.A.",
+      "full_address": "17 de Octubre 3600, P3600 Formosa",
+      "marca": "YPF",
+      "latitude": -26.1987856,
+      "longitude": -58.1753633,
+      "precios": {
+          "Nafta S\u00faper": 1158,
+          "Infinia": 1416,
+          "Diesel 500": 1256,
+          "Infinia Diesel": 1433
+      }
   },
   {
-    "name": "AXION energy",
-    "full_address": "España 495, P3600 Formosa",
-    "marca":"AXION",
-    "latitude": -26.182520476179253, 
-    "longitude": -58.170299846809804
+      "name": "AXION energy",
+      "full_address": "Espa\u00f1a 495, P3600 Formosa",
+      "marca": "AXION",
+      "latitude": -26.182520476179253,
+      "longitude": -58.170299846809804,
+      "precios":{
+          "Nafta Súper": 1158,
+          "Quantium": 1416,
+          "Diesel": 1256,
+          "Quantium Diesel": 1433
+      }
   },
   {
-    "name": "AXION energy",
-    "full_address":"Av. Dr. Nestor Kirchner, Blas Parera &, P3600 Formosa",
-    "marca":"AXION",
-    "latitude": -26.187230165856246, 
-    "longitude": -58.20927975075415
+      "name": "AXION energy",
+      "full_address": "Av. Dr. Nestor Kirchner, Blas Parera &, P3600 Formosa",
+      "marca": "AXION",
+      "latitude": -26.187230165856246,
+      "longitude": -58.20927975075415,
+      "precios":{
+          "Nafta Súper": 1158,
+          "Quantium": 1416,
+          "Diesel": 1256,
+          "Quantium Diesel": 1433
+      }
   }
 ]

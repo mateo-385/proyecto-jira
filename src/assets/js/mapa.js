@@ -5,10 +5,6 @@ const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const osmHOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team hosted by OpenStreetMap France'});
-
 // Función para crear iconos
 function crearIcono(url, size, anchor, popupAnchor) {
     return L.icon({
@@ -28,47 +24,87 @@ const shellIcon = crearIcono('/src/assets/img/shell.png', [55, 47.5], [9.5, 47.5
 const ypfLayerGroup = new L.LayerGroup().addTo(map);
 const axionLayerGroup = new L.LayerGroup().addTo(map);
 const shellLayerGroup = new L.LayerGroup().addTo(map);
-
 // Fetch de JSON con las Estaciones de Servicio
-fetch("/src/assets/json/estaciones.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('No respondió el servidor');
-        }
-        return response.json();
-    })
+// Intenta obtener la ubicación del usuario
+navigator.geolocation.getCurrentPosition(position => {
+    mostrarEstacionesCercanas(position.coords);
+}, () => {
+    mostrarTodasLasEstaciones();
+});
 
-    .then(data => {
-        data.forEach(estacion => {
-            const icono = {
-                'YPF': ypfIcon,
-                'AXION': axionIcon,
-                'Shell': shellIcon
-            }
-            [estacion.marca];
-            const targetGroup = {
-                'YPF': ypfLayerGroup,
-                'AXION': axionLayerGroup,
-                'Shell': shellLayerGroup
-            }
-            [estacion.marca];
+function mostrarEstacionesCercanas(coords) {
+    const { latitude: latUsuario, longitude: lonUsuario } = coords;
+    // Crea un marcador en la ubicación del usuario
+    const ubicacionUsuario = L.marker([latUsuario, lonUsuario]).addTo(map);
+    // Agrega un popup al marcador
+    ubicacionUsuario.bindPopup("Tu ubicación actual").openPopup();
 
-            if (!icono || !targetGroup) {
-                console.error('Marca no reconocida:', estacion.marca);
-                return;
+    fetch('/src/assets/json/estaciones.json')
+    .then(response => response.json())
+    .then(estaciones => {
+        estaciones.forEach(estacion => {
+            const distancia = L.latLng(latUsuario, lonUsuario).distanceTo(L.latLng(estacion.latitude, estacion.longitude));
+            if (distancia <= 10000) { // Ajusta este valor según necesites
+                agregarEstacionAlMapa(estacion);
             }
-
-            L.marker([estacion.latitude, estacion.longitude], { icon: icono })
-                .bindPopup(estacion.name)
-                .addTo(targetGroup);
         });
     })
     .catch(error => console.error('Error:', error));
+}
+
+function mostrarTodasLasEstaciones() {
+    fetch('/src/assets/json/estaciones.json')
+    .then(response => response.json())
+    .then(estaciones => {
+        estaciones.forEach(estacion => {
+            agregarEstacionAlMapa(estacion);
+        });
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+function agregarEstacionAlMapa(estacion) {
+    const targetGroup = {
+        'YPF': ypfLayerGroup,
+        'AXION': axionLayerGroup,
+        'Shell': shellLayerGroup
+    }[estacion.marca];
+
+    const icono = {
+        'YPF': ypfIcon,
+        'AXION': axionIcon,
+        'Shell': shellIcon
+    }[estacion.marca];
+
+    if (!icono || !targetGroup) {
+        console.error('Marca no reconocida:', estacion.marca);
+        return;
+    }
+
+    let popupContent = `
+    <div class="popup">
+    <h2>${estacion.name}</h2>
+    <p class="address">${estacion.full_address}</p>
+    <div class="prices">`;
+
+    if (estacion.precios && typeof estacion.precios === 'object') {
+        for (const [tipoCombustible, precio] of Object.entries(estacion.precios)) {
+            popupContent += `<div class="price"><span class="fuel">${tipoCombustible}:</span> $${precio}</div>`;
+        }
+    } else {
+        popupContent += `<p class="no-prices">Precios no disponibles</p>`;
+    }
+
+    popupContent += `</div></div>`;
+
+    L.marker([estacion.latitude, estacion.longitude], { icon: icono })
+        .bindPopup(popupContent)
+        .addTo(targetGroup);
+}
 
 // Control de Capas
 const baseMaps = {
     "OpenStreetMap": osm,
-    "OpenStreetMap.HOT": osmHOT
 };
 const overlayMaps = {
     "YPF": ypfLayerGroup,
